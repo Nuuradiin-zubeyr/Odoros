@@ -1,0 +1,79 @@
+.testimonial-section {
+	padding-top: 115px;
+	padding-bottom: 70px;
+	position: relative;
+	z-index: 1;
+	.pattern-overlay {
+		background-color: transparent;
+		background-image: url(assets/images/pattern1.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		opacity: 0.05;
+	}
+	.testimonial-inner {
+		@include bp(lg) {
+			.row {
+				[class*="col-"] {
+					padding: 0 30px;
+				}
+			}
+		}
+	}
+	@include bp(smx) {
+		padding-top: 70px;
+		padding-bottom: 40px;
+	}
+}
+.testimonial-item {
+	padding: 30px 0 15px 30px;
+	position: relative;
+	.testimonial-img {
+		border: 2px solid $primary-color;
+		border-radius: 100%;
+		overflow: hidden;
+		width: 85px;
+		height: 85px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		[class*="col-"]:nth-child(2) &,
+		[class*="col-"]:nth-child(3) & {
+			border-color: $secondary-color;
+		}
+	}
+	.testimonial-content {
+		background-image: url(assets/images/quote-img1.png);
+		background-color: $light-color;
+		background-repeat: no-repeat;
+		background-position: 98% 100%;
+		box-shadow: 0px 0px 25px 0px rgba($dark-color, 0.08);
+		padding: 50px;
+		p {
+			font-style: italic;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include bp(md) {
+		[class*="col-"]:nth-child(2n+2) & {
+			margin-top: 30px;
+		}
+	}
+	@include bp(smx) {
+		padding: 0;
+		margin-bottom: 30px;
+		.testimonial-img {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: -20px;
+		}
+		.testimonial-content {
+			background-size: 35px;
+			width: 100%;
+			padding: 40px 25px 25px;
+			text-align: center;
+		}
+	}
+}

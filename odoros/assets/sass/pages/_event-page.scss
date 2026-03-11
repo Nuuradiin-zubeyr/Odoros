@@ -1,0 +1,61 @@
+.event-detail-container {
+	margin-bottom: 60px;
+	h2 {
+		margin-bottom: 30px;
+	}
+	.time-counter-wrap {
+		margin-top: -80px;
+		margin-bottom: 35px;
+	}
+	.time-counter {
+		@include flexbox;
+		@include justify-content(center);
+		@include flex-wrap(wrap);
+		text-align: center;
+		* {
+			color: $light-color;
+		}
+		.counter-time {
+			background-color: $secondary-color;
+			border: 5px solid $light-color;
+			width: 110px;
+    		margin: 5px;
+    		padding: 15px 10px 20px;
+			span {
+				display: block;
+			}
+			[class*="counter-"] {
+				@include font-size(30);
+				font-family: $title-font;
+				font-weight: 900;
+				line-height: 1.1;
+			}
+		}
+	}
+	@include bp(smx) {
+		margin-bottom: 30px;
+	}
+}
+
+.event-page-section {
+	padding-bottom: 70px;
+	.iconbox-container {
+		margin-left: -15px;
+		margin-right: -15px;
+		margin-top: 50px;
+	}
+	.iconbox-item-2 {
+		padding: 0 15px;
+		margin-bottom: 20px;
+		width: 100%;
+		.iconbox-icon {
+			@include border-radius(100%);
+		}
+		@include bp(lg) {
+			width: 50%;
+		}
+	}
+	@include bp(smx) {
+		margin-bottom: 60px;
+	}
+}

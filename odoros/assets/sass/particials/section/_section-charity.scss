@@ -1,0 +1,50 @@
+.charity-section {
+	padding-top: 160px;
+	padding-bottom: 100px;
+	@include bp(smx) {
+		padding-top: 100px;
+		padding-bottom: 70px;
+	}
+}
+.charity-item {
+	background-color: $light-color;
+	box-shadow: 0px 15px 15px -10px rgba($dark-color, 0.15);
+	margin-bottom: 30px;
+	.charity-image {
+		position: relative;
+		margin-bottom: 35px;
+	}
+	.charity-content {
+		padding: 0 25px 25px;
+		.fund-detail {
+			@include flexbox();
+			@include flex-wrap(wrap);
+			@include justify-content(space-between);
+			margin-top: 15px;
+			.fund-name {
+				font-size: 13px;
+				text-transform: uppercase;
+				font-weight: 700;
+				line-height: 1.1;
+				margin-right: 5px;
+			}
+			.fund-content {
+				color: $secondary-color;
+				line-height: 1.1;
+				font-weight: 400;
+				font-size: 13px;
+			}
+		}
+	}
+	.btn-wrap {
+		position: absolute;
+    	bottom: -19px;
+    	right: 25px;
+		a {
+			border: 3px solid $light-color;
+			padding: 10px 15px;
+			font-size: 13px;
+		}
+
+	}
+}

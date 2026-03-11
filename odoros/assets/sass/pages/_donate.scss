@@ -1,0 +1,136 @@
+.donate-section {
+	padding-bottom: 100px;
+	@include bp(smx) {
+		padding-bottom: 60px;
+	}
+}
+.donate-form {
+	.form-inner {
+		background-color: $light-color;
+		margin-bottom: 50px;
+		padding: 40px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		h3 {
+			margin-bottom: 30px;
+		}
+		.form-group {
+			margin-bottom: 30px;
+			input,
+			textarea {
+				border: none;
+			}
+		}
+		&.donate-amout {
+			.form-group {
+				margin-bottom: 0;
+			}
+		}
+		&.donate-method {
+			.radio-img {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.donate-amout {
+		.form-wrap {
+			@include flex-wrap(wrap);
+		}
+		.form-group:not(.amount-radio) {
+			@include flex-grow(1);
+		}
+	}
+	.amount-radio {
+		width: 100px;
+		height: 55px;
+		text-align: center;
+		line-height: 55px;
+		margin-right: 20px;
+		label {
+			border: 1px solid #DEDEDE; 
+			@include border-radius(25px);
+			font-size: 23px;
+			font-weight: 600;
+		}
+		input {
+			&[type="radio"] {
+				position: absolute;
+				z-index: -9;
+			}
+			&:checked ~ label {
+				background-color: $secondary-color;
+				color: $light-color;
+			}
+		}
+	}
+	.radio-img {
+		width: 100px;
+		height: 60px;
+		text-align: center;
+		line-height: 60px;
+		margin-right: 10px;
+		label {
+			@include border-radius(6px);
+			border: 1px solid #ECECEC;
+			margin-bottom: 0;
+		}
+		input {
+			&[type="radio"] {
+				position: absolute;
+				z-index: -9;
+			}
+			&:checked ~ label {
+				background-color: #DEDEDE;
+			}
+		}
+		img {
+			vertical-align: middle;
+		}
+	}
+	.donate-method {
+		.form-wrap {
+			margin-bottom: 30px;
+		}
+		label {
+			display: block;
+		}
+	}
+	@include bp(smx) {
+		.form-inner {
+			padding: 30px 20px;
+			.form-group{
+				margin-bottom: 20px;
+			}
+			&.donate-amout {
+				.amount-radio {
+					margin-bottom: 20px;
+				}
+			}
+		}
+		.donate-amout {
+			.form-group {
+				@include flex-grow(1);
+			}
+		}
+		.amount-radio {
+			width: 60px;
+			height: 42px;
+			line-height: 42px;
+			label {
+				font-size: 14px;
+				font-weight: 600;
+			}
+		}
+		.radio-img {
+			height: auto;
+			line-height: initial;
+			label {
+				padding: 5px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.callback-section {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	padding-bottom: 80px;
+	padding-top: 80px;
+	position: relative;
+	z-index: 1;
+	.section-title {
+		color: $light-color;
+		margin-bottom: 20px;
+	}
+	.button-right {
+		text-align: right;
+	}
+	@include bp(smx) {
+		.button-right {
+			text-align: initial;
+			padding-top: 10px;
+		}
+	}
+}

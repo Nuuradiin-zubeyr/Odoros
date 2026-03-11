@@ -1,0 +1,70 @@
+.volunteer-wrap {
+	padding-bottom: 100px;
+	@include bp(smx) {
+		padding-bottom: 60px;
+	}
+}
+.volunteer-contact-form {
+	background-color: $light-color;
+	box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.2);
+	@include border-radius(25px);
+	padding: 50px;
+	position: relative;
+	text-align: center;
+	h2 {
+		margin-bottom: 40px;
+	}
+	form {
+		.form-group {
+			margin-bottom: 30px;
+			input,
+			textarea {
+				border: none;
+			}
+		}
+		.form-grop-file {
+			position: relative;
+			text-align: initial;
+			label {
+				background-color: #F8F8F8;
+				@include border-radius(25px);
+				color: #8F918F;
+				margin-bottom: 0;
+				height: 55px;
+				width: 100%;
+				line-height: 55px;
+				font-weight: 400;
+				font-size: 14px;
+				padding: 0 15px;
+			}
+			input[type="file"] {
+				opacity: 0;
+				visibility: hidden;
+				position: absolute;
+				left: 0;
+				z-index: -9;
+			}
+			i {
+				position: absolute;
+				right: 30px;
+				top: 17px;
+				font-size: 20px;
+			}
+		}
+	}
+	@include bp(smx) {
+		padding: 30px 20px;
+		margin-top: 60px;
+		form {
+			.form-grop-file {
+				label {
+					height: 42px;
+					line-height: 42px;
+				}
+				i {
+					top: 10px;
+				}
+			}
+		}
+	}
+}

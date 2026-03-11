@@ -1,0 +1,82 @@
+.home-banner {
+	@include background(size, cover);
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-bottom: 125px;
+	padding-top: 230px;
+	position: relative;
+	z-index: 1;
+	@include bp(smx) {
+		padding-top: 200px;
+		padding-bottom: 70px;
+	}
+}
+.banner-content {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index: 1;
+	.back-title {
+		font-size: 130px;
+		margin-bottom: -65px;
+	}
+	.banner-title {
+		@include font-size(70);
+		color: $light-color;
+		line-height: 1.2;
+		font-weight: 900;
+		margin-bottom: 30px;
+	}
+	.banner-text {
+		p {
+			color: $light-color;
+			margin-bottom: 45px;
+		}
+	}
+	.banner-button {
+		margin-left: -7px;
+		margin-right: -7px;
+		a {
+			margin: 7px;
+		}
+	}
+	@include bp(lgx) {
+		.back-title {
+			font-size: 70px;
+		}
+		.banner-title {
+			@include font-size(50);
+		}
+	}
+	@include bp(mdx) {
+		.banner-title {
+			@include font-size(45);
+		}
+	}
+	@include bp(smx) {
+		.back-title {
+			font-size: 45px;
+			margin-bottom: -20px;
+		}
+		.banner-title {
+			@include font-size(32);
+		}
+		.banner-text {
+			p {
+				font-size: 16px;
+			}
+		}
+		.banner-button {
+			margin-left: -5px;
+			margin-right: -5px;
+			@include flexbox();
+			@include flex-wrap(wrap);
+			a {
+				padding: 10px 15px;
+				text-align: center;
+				margin: 5px;
+				@include flex-grow(1);
+			}
+		}
+	}
+}

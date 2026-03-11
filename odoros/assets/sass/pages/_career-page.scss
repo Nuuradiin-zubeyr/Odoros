@@ -1,0 +1,131 @@
+.vacancy-container {
+	padding-bottom: 60px;
+	padding-top: 20px;
+	.vacancy-form {
+		box-shadow: 0px 0px 30px 0px rgba($dark-color, 0.15);
+		background-color: $light-color;
+		padding: 30px;
+		text-align: center;
+		h4 {
+			background-color: $secondary-color;
+			color: $light-color;
+			padding: 15px 10px;
+		}
+		form {
+			text-align: left;
+			margin-top: 30px;
+			p {
+				margin-bottom: 20px;
+			}
+		}
+		input {
+			width: 100%;
+			&:not([type="submit"]) {
+				height: 59px;
+			}
+			&[type="submit"] {
+				border: 2px solid $light-color;
+				color: $light-color;
+				@include transition(all 0.4s);
+				&:hover {
+					border-color: $hover-color;
+				}
+			}
+		}
+	}
+	@include bp(lg){
+		.vacancy-form {
+			margin-left: 30px;
+		}
+	}
+}
+
+.vacancy-content {
+	margin-bottom: 30px;
+	padding: 40px;
+	border: 1px solid rgba($primary-color, 0.25);
+	span {
+		color: $primary-color;
+		margin-bottom: 10px;
+		font-weight: 600;
+		display: block;
+	}
+	.button-round-secondary {
+		margin-top: 10px;
+	}
+}
+
+.vacancy-content-wrap {
+	[class*="col-"] {
+		&:first-child,
+		&:nth-child(4n+4),
+		&:nth-child(4n+5) {
+			.vacancy-content {
+				box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.25);
+				border: none;
+				.button-round-secondary {
+					background-color: $primary-color;
+					color: $secondary-color;
+					&:hover {
+						background-color: $hover-color;
+						color: $light-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+.carrer-page-section {
+	padding-bottom: 80px;
+	.section-disc {
+		@include bp(lg) {
+			margin-left: 50px;
+		}
+	}
+	.iconbox-container {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	@include bp(smx) {
+		padding-bottom: 40px;
+		.iconbox-container {
+			padding-top: 10px;
+		}
+	}
+}
+.iconbox-item-3 {
+	padding: 0 15px;
+	margin-bottom: 20px;
+	width: 100%;
+	@include bp(md) {
+		width: 50%;
+	}
+	@include bp(lg) {
+		width: 33.33%;
+	}
+}
+.iconbox-border {
+	border: 1px solid #D9D9D9;
+	padding: 25px;
+	width: 100%;
+	.iconbox-icon {
+		background-color: $primary-color; 
+		color: $secondary-color;
+		font-size: 32px;
+		width: 78px;
+		height: 78px;
+		line-height: 78px;
+		text-align: center;
+	}
+	.iconbox-content {
+		@include calc(width, '100% - 78px');
+		padding-left: 20px;
+		h4 {
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

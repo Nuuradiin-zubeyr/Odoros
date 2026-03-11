@@ -1,0 +1,21 @@
+.blog-archive {
+	padding-bottom: 100px;
+	@include bp(smx) {
+		padding-bottom: 50px;
+	}
+}
+.right-sidebar {
+	@include bp(lg) {
+		padding-right: 40px;
+	}
+}
+.left-sidebar {
+	@include bp(lg) {
+		padding-left: 40px;
+	}
+}
+.grid-item {
+	.post {
+		margin-bottom: 40px;
+	}
+}

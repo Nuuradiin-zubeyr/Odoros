@@ -1,0 +1,231 @@
+.site-footer {
+	background-color: $secondary-color;
+	padding-top: 80px;
+	.top-footer {
+		padding-bottom: 55px;
+	}
+	.footer-logo {
+		margin-bottom: 20px;
+	}
+	.bottom-footer {
+		background-color: #0e3201;
+		padding: 20px 0;
+	}
+	.copy-right {
+		color: $light-color;
+		a {
+			color: $light-color;
+			&:hover {
+				color: $hover-color;
+			}
+		}
+	}
+	.lower-footer {
+		border-top: 1px solid rgba($light-color, 0.14);
+		padding-top: 45px;
+		.social-links {
+			margin-bottom: 20px;
+			li {
+				margin: 0 5px;
+				a {
+					background-color: rgba($primary-color, 0.44);
+					font-size: 14px;
+					@include border-radius(100%);
+					color: $light-color;
+					display: block;
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+					text-align: center;
+					@include transition(background-color 0.4s);
+					&:hover {
+						background-color: $hover-color;
+					}
+				}
+			}
+		}
+	}
+	.footer-newsletter {
+		h5 {
+			color: $light-color;
+			font-family: $primary-font;
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+		input[type="email"] {
+			color: $light-color;
+			background-color: transparent;
+			border-color: rgba($light-color, 0.35);
+			height: 60px;
+			width: 100%;
+		}
+		button {
+			position: absolute;
+			top: 50%;
+			right: 6px;
+			@include translate(0, -50%);
+		}
+	}
+	.footer-menu {
+		ul {
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			li {
+				list-style: none;
+				display: inline-block;
+				position: relative;
+				padding: 0 10px;
+				&:before {
+					content: "|";
+					position: absolute;
+					top: 0;
+					right: -2px;
+					font-size: 14px;
+					color: #B6B6B6;
+				}
+				&:last-child {
+					&:before {
+						display: none;
+					}
+				}
+				a {
+					color: $light-color;
+					font-size: 13px;
+					&:hover,
+					&:focus {
+						color: $hover-color;
+					}
+				}
+			}
+		}
+	}
+	@include bp(lgx) {
+		.footer-newsletter {
+			margin-bottom: 20px;
+		}
+		.lower-footer {
+			.text-right {
+				text-align: initial !important;
+			}
+		}
+	}
+	@include bp(smx) {
+		padding-top: 50px;
+		.top-footer {
+			padding-bottom: 25px;
+		}
+		.footer-newsletter {
+			input[type="email"] {
+				height: 50px;
+			}
+		}
+		.footer-menu {
+			ul {
+				li {
+					a {
+						font-size: 13px;
+						font-weight: normal;
+					}
+				}
+			}
+		}
+	}
+}
+.footer-primary {
+	.widget {
+		color: darken($light-color, 12%);
+		.widget-title {
+			color: $light-color;
+			font-size: 22px;
+			font-weight: 500;
+			line-height: 1.1;
+			margin-bottom: 30px;
+			&:after {
+				background-color: $primary-color;
+				content: "";
+				display: table;
+				height: 2px;
+				width: 63px;
+				margin-top: 14px;
+			}
+		}
+		ul {
+			li {
+				margin-bottom: 10px;
+				a {
+					color: $light-color;
+					&:hover,
+					&:focus,
+					&:active {
+						color: $hover-color;
+					}
+				}
+			}
+		}
+	}
+	@include bp(lgx) {
+		.widget {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.widget_map_hotspots {
+	.widget-map {
+		position: relative;
+	}
+	.hotspot {
+		> div {
+			position: absolute;
+			display: block;
+			&.hotspot-one {
+				top: -7px;
+				left: 60px;
+			}
+			&.hotspot-two {
+				top: -7px;
+				right: 56px;
+			}
+			&.hotspot-three {
+				top: 42px;
+				left: 96px;
+			}
+			&.hotspot-four {
+				top: 56px;
+				left: 119px;
+			}
+			&.hotspot-five {
+				bottom: 12px;
+				right: 23px;
+			}
+		}
+		.hotspot-content {
+			color: $light-color;
+			position: absolute;
+			font-size: 14px;
+			left: 50%;
+			top: 20px;
+			white-space: nowrap;
+			@include translate(-50%, 0);
+			visibility: hidden;
+			@include transition(visibility 0.4s);
+			z-index: 1;
+		}
+		a {
+			color: $primary-color;
+			&:hover {
+				~ .hotspot-content {
+					visibility: visible;
+				}
+			}
+		}
+	}
+	@include bp(smx) {
+		.widget-map {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

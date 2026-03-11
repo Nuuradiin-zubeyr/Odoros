@@ -1,0 +1,6 @@
+.team-page-section {
+	padding-bottom: 60px;
+	@include bp(smx) {
+		padding-bottom: 30px;
+	}
+}
